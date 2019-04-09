@@ -30,5 +30,18 @@ public class BubbleSort
         System.out.println(Arrays.toString(array)); // [ 2, 1, 3, 4, 5 ]
     
 
+    public static <T> void bubblsSort(T[] array, int lo, int hi, Comparator<T> c){
+        if (lo > hi){
+            System.out.println("invalid indices");
+            return;
+        }
+        int count = 0;
+        T[] unsorted = array;
+        while(hi>=lo){
+            array[count] = bubble(unsorted, 0, hi, Integer::compareTo);
+            hi--;
+            count++;
+        }
 
-}
+    }
+},
