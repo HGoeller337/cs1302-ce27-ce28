@@ -3,7 +3,7 @@ import java.util.Comparator;
 
 public class BubbleSort
 {
-    T temp = 0;
+    int temp = 0;
     public static <T> void bubble(T[] array, int lo , int hi, Comparator<T> c)
         {
             if(!(lo<=hi))
@@ -28,7 +28,7 @@ public class BubbleSort
         System.out.println(Arrays.toString(array)); // [ 2, 3, 1, 4, 5 ]
         bubble(array, 0, 4, Integer::compareTo);
         System.out.println(Arrays.toString(array)); // [ 2, 1, 3, 4, 5 ]
-    
+    }
 
     public static <T> void bubblsSort(T[] array, int lo, int hi, Comparator<T> c){
         if (lo > hi){
@@ -44,4 +44,4 @@ public class BubbleSort
         }
 
     }
-},
+}
