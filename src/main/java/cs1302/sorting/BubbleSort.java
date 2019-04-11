@@ -32,7 +32,8 @@ public class BubbleSort
         int count = 0;
         T[] unsorted = array;
         while(hi>=lo){
-            array[count] = bubble(unsorted, 0, hi, Integer::compareTo);
+            bubble(unsorted, 0, hi, c);
+            array[count] = unsorted[count];
             hi--;
             count++;
         }
